@@ -35,22 +35,22 @@
 	</header>
 		<main role="main" class = "container">
 		<div class="row justify-content-center">
-			<div class="col-8 text-center text-white mt-2" >
+			<div id="paneltitle" class="col-10 text-center text-white mt-2" >
 				<h2>Zaloguj się na własne darmowe konto!</h2>
 			</div>
 		</div>
 			<div class="row justify-content-center">
 				<div class="col-md-4">					
-					<div class="py-3 my-3 bg-light text-black text-center rounded">
-						<div class="d-inline-block buttons-sizing rounded border-danger buttons-underline">
+					<div class="py-3 my-2 bg-light text-black text-center rounded">
+						<div class="d-inline-block buttons-sizing rounded border-danger buttons-underline" onclick="changetologin()" >
 							<span class="button-size">Zaloguj</span>
 						</div>					
-						<div class="d-inline-block buttons-sizing rounded buttons-underline border-danger">
+						<div class="d-inline-block buttons-sizing rounded buttons-underline border-danger" onclick="changetoregister()">
 							<span class="button-size">Zarejestruj</span>
 						</div>
 					</div>				
 					<div>
-						<form class="p-4 my-3 bg-light text-black rounded">
+						<form id="loginButt" class="px-4 py-2 mb-2 bg-light text-black rounded">
 							<div class="form-group">						
 								<label for="przykladowyEmail" class="text-center"> Adres Email </label>
 							
@@ -60,7 +60,6 @@
 									</div>
 									<input type="text" class="form-control" placeholder="Adres Email " aria-label="Username" aria-describedby="basic-addon1">
 								</div>
-								<small id="podpowiedzEmail" class="form-text text-muted">W powyższym polu wpisujesz swój adres email.</small>
 							</div>
 						  
 							<div class="form-group">					  
@@ -85,7 +84,7 @@
 					</div>
 				</div>
 				<div class="col-md-5">
-					<div class="bg-light mb-3 p-md-2 my-md-3 rounded">
+					<div class="bg-light mb-3 p-md-2 my-md-2 rounded">
 						<fieldset class="border-mine border-danger text-sizing">
 						   <legend  class="w-auto"><h5>Dlaczego warto?</h5></legend>   
 							<ul class="mr-3 text-justify">
