@@ -16,15 +16,51 @@ body
 {
 	font-size: 30px;
 }
+.buttons-sizing
+{
+	width: 45%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.sticky-footer-container
+{
+	padding-bottom: 120px;
+}
+.myfooter {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+.border-mine
+{
+	border: 5px solid;
+}
+.buttons-underline
+{
+	border-bottom: 5px solid;
+}
+.buttons-underline:hover
+{
+	border-bottom: 5px solid;
+	background-color: #DDD;
+	cursor: pointer;
+}
+.button-size
+{
+	font-weight: bold;
+}
+.text-sizing
+{
+	font-size: 12px;
+}
 #slider
 {
 	
 }
 h6
-{
-	margin: 0;
-}
-.btn
 {
 	margin: 0;
 }
