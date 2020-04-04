@@ -13,16 +13,16 @@
 <script src="zmiany.js"></script>
 <script src="jquery.js"></script>
 
-<head/>
+</head>
 
-<body onload="changeslide()">
+<body onload="changeslide(); changelogo()" onResize="changelogo()">
 	<header>
 		<div class="container-top">
 			<nav class="navbar bg-dark fixed-top navbar-expand-md text-white">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<a class="navbar-brand text-white text-center" href="apka-budżetowa-logowanie">
-							<h4>
+							<h4 id="maintitle">
 								<span>
 									<i class="icon-wallet"></i>
 								</span>Oszczędzanko.pl
@@ -62,10 +62,10 @@
 				<div class="col-sm-8">
 					<div class="p-3 mb-2 bg-light text-black rounded">
 						<div class="wysrodkuj">
-							<div id ="slider" class="text-center"></div>
+							<div id ="slider" class="text-center text-break"></div>
 						</div>
 					</div>
-					<article class="p-3 mb-2 bg-light text-black rounded">
+					<article class="p-3 mb-2 bg-light text-black rounded text-break">
 						<header>
 							<h3>Czym jest aplikacja budżetowa?</h3>
 						</header>
@@ -74,10 +74,10 @@
 				</div>
 			</div>
 		</main>
-	<section class ="container-fluid">
-	<div class="sticky-footer-container"></div>
-		<footer id = "footer" class="myfooter">
-			<div class="row bg-dark">
+	<section>
+		<div class="sticky-footer-container"></div>
+		<footer id = "footer" class="myfooter container-fluid bg-dark">
+			<div class="row">
 				<div class="col-6 text-right socialmedia mt-3">
 					<a href="#"><i class="icon-facebook bg-primary text-white"></i></a>
 					<a href="#"><i class="icon-twitter bg-white text-primary"></i></a>
@@ -88,7 +88,7 @@
 				</div>
 			</div>
 			<div class="row bg-dark">
-				<div class="col-sm-12 text-center text-white my-2">
+				<div class="col-12 text-center text-white my-2">
 					Copyright © 2020. Made with love by Arkadiusz Pacewicz. All Rights Reserved.
 				</div>
 			</div>

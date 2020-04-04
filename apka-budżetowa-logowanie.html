@@ -13,16 +13,16 @@
 <script src="zmiany.js"></script>
 <script src="jquery.js"></script>
 
-<head/>
+</head>
 
-<body>
+<body onLoad="changelogo()" onResize="changelogo()">
 	<header>
 		<div class="container-top">
 			<nav class="navbar bg-dark fixed-top navbar-expand-md text-white">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<a class="navbar-brand text-white text-center" href="index.html">
-							<h4>
+							<h4 id="maintitle">
 								<span>
 									<i class="icon-wallet"></i>
 								</span>Oszczędzanko.pl
@@ -35,7 +35,7 @@
 	</header>
 		<main role="main" class = "container">
 		<div class="row justify-content-center">
-			<div id="paneltitle" class="col-10 text-center text-white mt-2" >
+			<div id="paneltitle" class="col-10 text-center text-color-mine text-white mt-2" >
 				<h2>Zaloguj się na własne darmowe konto!</h2>
 			</div>
 		</div>
@@ -43,10 +43,10 @@
 				<div class="col-md-4">					
 					<div class="py-3 my-2 bg-light text-black text-center rounded">
 						<div class="d-inline-block buttons-sizing rounded border-danger buttons-underline" onclick="changetologin()" >
-							<span class="button-size">Zaloguj</span>
+							<span class="button-size text-break">Zaloguj</span>
 						</div>					
 						<div class="d-inline-block buttons-sizing rounded buttons-underline border-danger" onclick="changetoregister()">
-							<span class="button-size">Zarejestruj</span>
+							<span class="button-size text-break">Zarejestruj</span>
 						</div>
 					</div>				
 					<div>
@@ -84,27 +84,27 @@
 					</div>
 				</div>
 				<div class="col-md-5">
-					<div class="bg-light mb-3 p-md-2 my-md-2 rounded">
+					<div class="bg-light mb-3 p-md-2 my-md-2 rounded text-break">
 						<fieldset class="border-mine border-danger text-sizing">
 						   <legend  class="w-auto"><h5>Dlaczego warto?</h5></legend>   
 							<ul class="mr-3 text-justify">
-								<li><p><h6>Darmowy system oszczędzania:</h6> wystarczy regularnie wprowadzać zawarte transakcje.</p></li>
+								<li><h6>Darmowy system oszczędzania:</h6><p>Wystarczy regularnie wprowadzać zawarte transakcje.</p></li>
 								
-								<li><p><h6>Mobilność:</h6> możliwość ewidencjonowania budżetu w każdym momencie za pomocą urządzeń mobilnych.</p></li>
+								<li><p><h6>Mobilność:</h6> Możliwość ewidencjonowania budżetu w każdym momencie za pomocą urządzeń mobilnych.</p></li>
 								
 								<li><p><h6>Satysfakcja:</h6>Nic nie tracisz a możesz jedynie zyskać. Pierwsze efekty zobaczysz już po miesiącu!</p></li>
 								
-								<li><p><h6>Pełna kontrola nad budżetem:</h6> widzisz dokładnie stosunek przychodów/wydatków z dowolnego okresu.<p></li>
+								<li><p><h6>Pełna kontrola nad budżetem:</h6> Widzisz dokładnie stosunek przychodów/wydatków z dowolnego okresu.<p></li>
 							</ul>
 						</fieldset>
 					</div>
 				</div>
 			</div>
 		</main>
-	<section class ="container-fluid">
-	<div class="sticky-footer-container"></div>
-		<footer id = "footer" class="myfooter">
-			<div class="row bg-dark">
+	<section>
+		<div class="sticky-footer-container"></div>
+		<footer id = "footer" class="myfooter container-fluid bg-dark">
+			<div class="row">
 				<div class="col-6 text-right socialmedia mt-3">
 					<a href="#"><i class="icon-facebook bg-primary text-white"></i></a>
 					<a href="#"><i class="icon-twitter bg-white text-primary"></i></a>
@@ -115,7 +115,7 @@
 				</div>
 			</div>
 			<div class="row bg-dark">
-				<div class="col-sm-12 text-center text-white my-2">
+				<div class="col-12 text-center text-white my-2">
 					Copyright © 2020. Made with love by Arkadiusz Pacewicz. All Rights Reserved.
 				</div>
 			</div>

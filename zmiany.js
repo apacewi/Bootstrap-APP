@@ -56,3 +56,70 @@ function changetologin()
 	document.getElementById("loginButt").innerHTML = login;
 	document.getElementById("paneltitle").innerHTML = newtitle;
 }
+function detect() {
+	
+	
+	
+	var navinside = '<div><ul class="nopoints text-center my-auto pl-0"><li class="nav-item collapse-menu rounded"><a class="nav-link text-white" href="#"><span class="mainmenu">Strona główna<span></a></li><li class="nav-item collapse-menu text-center rounded dropdown"><a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"onclick="incomesmenu()"><span class="mainmenu">Przychody</span></a><div id="incomes" class="bg-light rounded" aria-labelledby="navbarDropdown"></div></li><li class="nav-item collapse-menu rounded dropdown"><a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="expansesmenu()"><span class="mainmenu">Wydatki</span></a><div id="expanses" class="bg-light rounded" aria-labelledby="navbarDropdown"></div></li><li class="nav-item collapse-menu rounded"><a class="nav-link text-white" href="#"><span class="mainmenu">Przeglądaj bilans</span></a></li><li class="nav-item collapse-menu"><a class="nav-link text-white rounded" href="#"><span class="mainmenu">Ustawienia</span></a></li><li class="nav-item collapse-menu rounded"><a class="nav-link text-white" href="#"><span class="mainmenu">Wyloguj się</span></a></li></ul></div>'
+	
+	var bigullist = '<div><ul class="d-inline-block nopoints my-auto pl-0"><li class="nav-item collapse-menu rounded d-inline-block"><a class="nav-link text-white" href="#"><span class="mainmenu">Strona główna<span></a></li><li class="nav-item collapse-menu rounded dropdown d-inline-block"><a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mainmenu">Przychody</span></a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item rounded" href="#">Dodaj przychód</a><a class="dropdown-item rounded" href="#">Edytuj przychód</a><a class="dropdown-item rounded" href="#">Usuń przychód</a></div></li><li class="nav-item collapse-menu rounded dropdown d-inline-block"><a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mainmenu">Wydatki</span></a><div class="dropdown-menu " aria-labelledby="navbarDropdown"><a class="dropdown-item rounded" href="#">Dodaj wydatek</a><a class="dropdown-item rounded" href="#">Edytuj wydatek</a><a class="dropdown-item rounded" href="#">Usuń wydatek</a></div></li><li class="nav-item collapse-menu rounded d-inline-block"><a class="nav-link text-white" href="#"><span class="mainmenu">Przeglądaj bilans</span></a></li><li class="nav-item collapse-menu rounded d-inline-block"><a class="nav-link text-white" href="#"><span class="mainmenu">Ustawienia</span></a></li></ul></div><div class="toright"><ul class="toright d-inline-block nopoints my-auto pl-0"><li class="nav-item collapse-menu rounded d-inline-block"><a class="nav-link text-white" href="#"><span class="mainmenu">Wyloguj się<span></a></li></ul></div>';
+	
+	var tabletoption = '<div><ul class="d-inline-block nopoints my-auto pl-0"><li class="nav-item collapse-menu rounded d-inline-block"><a class="nav-link text-white" href="#"><span class="mainmenu">Strona główna<span></a></li><li class="nav-item collapse-menu rounded dropdown d-inline-block"><a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mainmenu">Przychody</span></a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Dodaj przychód</a><a class="dropdown-item" href="#">Edytuj przychód</a><a class="dropdown-item" href="#">Usuń przychód</a></div></li><li class="nav-item collapse-menu rounded dropdown d-inline-block"><a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mainmenu">Wydatki</span></a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Dodaj wydatek</a><a class="dropdown-item" href="#">Edytuj wydatek</a><a class="dropdown-item" href="#">Usuń wydatek</a></div></li><li class="nav-item collapse-menu rounded d-inline-block"><a class="nav-link text-white" href="#"><span class="mainmenu">Przeglądaj bilans</span></a></li><li class="nav-item collapse-menu rounded d-inline-block"><a class="nav-link text-white" href="#"><span class="mainmenu">Ustawienia</span></a></li><li class="nav-item collapse-menu rounded d-inline-block"><a class="nav-link text-white" href="#"><span class="mainmenu">Wyloguj się<span></a></li></ul></div>';
+	
+   if(window.innerWidth < 700) {		
+      document.getElementById("mainmenu").innerHTML=navinside;
+   }
+   else{
+	   if(window.innerWidth < 991 && window.innerWidth >= 700){		   
+	  document.getElementById("mainmenu").innerHTML=tabletoption;
+	   }
+	   else{
+	  document.getElementById("mainmenu").innerHTML=bigullist;
+	   }
+   }
+}
+function changelogo(){
+	 if(window.innerWidth < 340) {		
+      document.getElementById("maintitle").innerHTML='<span><i class="icon-wallet"></i></span>';
+	}
+	else{
+		document.getElementById("maintitle").innerHTML='<span><i class="icon-wallet"></i></span>Oszczędzanko.pl'
+   }
+}
+var isincomesclicked=true;
+function incomesmenu(){
+		if(isincomesclicked==true){
+	document.getElementById("incomes").innerHTML='<a class="dropdown-item" href="#">Dodaj przychód</a><a class="dropdown-item" href="#">Edytuj przychód</a><a class="dropdown-item" href="#">Usuń przychód</a>';
+	isincomesclicked = false;
+	}
+	else if (isincomesclicked==false){
+	document.getElementById("incomes").innerHTML='';
+	isincomesclicked = true;	
+	}
+}
+var isexpanseclicked=true;
+function expansesmenu(){
+		
+	if(isexpanseclicked==true){
+	document.getElementById("expanses").innerHTML='<a class="dropdown-item" href="#">Dodaj wydatek</a><a class="dropdown-item" href="#">Edytuj wydatek</a><a class="dropdown-item" href="#">Usuń wydatek</a>';
+	isexpanseclicked = false;
+	}
+	else if (isexpanseclicked==false){
+	document.getElementById("expanses").innerHTML='';
+	isexpanseclicked = true;	
+	}
+}
+function changemenucontent()
+{
+	if(window.innerWidth < 580){
+		document.getElementById("main-menu-content").innerHTML='<div class="col-10 p-3"><div class="pb-2 bg-light rounded mb-3 px-3 info-place text-break"><fieldset class="border-mine border-danger pt-2 pb-4 px-2"><legend  class="w-auto"><h5>Twoje działania</h5></legend><div class="text-center px-2"><span class="mynumber">1</span>Wprowadzasz informację o przychodach np. wynagrodzeniu z pracy.</div></fieldset></div><i class="icon-down-open timeline-arrow-3 text-center mb-3"></i><div class="pb-2 bg-light rounded mb-3 px-3 info-place text-break"><fieldset class="border-mine border-danger pt-2 pb-4 px-2"><legend  class="w-auto"><h5>Efekt</h5></legend> <div class="text-center px-2"><span class="mynumber">2</span>Twój portfel w aplikacji zostaje uzupełniony o dodatkowe środki.</div></fieldset></div><i class="icon-down-open timeline-arrow-3 text-center mb-3"></i><div class="pb-2 bg-light rounded mb-3 px-3 info-place text-break"><fieldset class="border-mine border-danger pt-2 pb-4 px-2"><legend  class="w-auto"><h5>Twoje działania</h5></legend> <div class="text-center px-2"><span class="mynumber">3</span>Dokonujesz płatności - wprowadzasz wydatek.</div></fieldset></div><i class="icon-down-open timeline-arrow-3 text-center mb-3"></i><div class="pb-2 bg-light rounded mb-3 px-3 info-place px-2 text-break"><fieldset class="border-mine border-danger pt-2 pb-4"><legend  class="w-auto"><h5>Efekt</h5></legend> <div class="text-center px-2"><span class="mynumber">4</span>Twój portfel zostaje obciążony.</div></fieldset></div><i class="icon-down-open timeline-arrow-3 text-center mb-3"></i><div class="pb-2 bg-light rounded mb-3 px-3 info-place px-2 text-break"><fieldset class="border-mine border-danger pt-2 pb-4"><legend  class="w-auto"><h5>Twoje działania</h5></legend> <div class="text-center px-2"><span class="mynumber">5</span>Panujesz nad swoim budżetem, sprawdzasz bilans z dowolnego okresu.</div></fieldset></div><i class="icon-down-open timeline-arrow-3 text-center mb-3"></i><div class="pb-2 bg-light rounded mb-3 px-3 info-place px-2 text-break"><fieldset class="border-mine border-danger pt-2 pb-4"><legend  class="w-auto"><h5>Efekt</h5></legend> <div class="text-center px-2"><span class="mynumber">6</span>Pełna kontrola to więcej oszczędności :)</div></fieldset></div></div>';
+	}
+	else{
+		if(window.innerWidth >= 580 && window.innerWidth < 770){
+			document.getElementById("main-menu-content").innerHTML='<div class="col-sm-5 text-center rounded p-3"><div class="py-2 rounded mb-3 info-place"><span class="timeline-title">Twoje działania:</span></div><div class="py-4 bg-light rounded mb-10 px-3 info-place"><span class="mynumber">1</span>Wprowadzasz informację o przychodach np. wynagrodzeniu z pracy.</div><div class="p-4 bg-light rounded mb-20 px-3 info-place"><span class="mynumber">3</span>Dokonujesz płatności - wprowadzasz wydatek.</div><div class="py-4 bg-light rounded mb-5 px-3 info-place"><span class="mynumber">5</span>Panujesz nad swoim budżetem, sprawdzasz bilans z dowolnego okresu.</div></div><div class="col-sm-2 text-center p-3 px-3 text-center"><div class="fusion-timeline-line"><span class = "timeline-circle mt-15 mb-10"></span><span class = "timeline-circle mb-15"></span><span class = "timeline-circle mb-10"></span><span class = "timeline-circle mb-20"></span><span class = "timeline-circle mb-10"></span><span class = "timeline-circle"></span></div><i class="icon-down-dir timeline-arrow-2"></i></div><div class="col-sm-5 text-center p-3"><div class="py-2 rounded mb-20 px-3 info-place"><span class="timeline-title">Efekt:</span></div><div class="py-4 bg-light rounded mb-15 px-3 info-place"><span class="mynumber">2</span>Twój portfel w aplikacji zostaje uzupełniony o dodatkowe środki.</div><div class="py-4 bg-light rounded mb-20 px-3 info-place"><span class="mynumber">4</span>Twój portfel zostaje obciążony.</div><div class=" p-4 bg-light rounded mb-5 px-3 info-place"><span class="mynumber">6</span>Pełna kontrola to więcej oszczędności :)</div></div>';
+		}
+		else {
+			document.getElementById("main-menu-content").innerHTML='<div class="col-md-5 col-lg-4 col-xl-3 text-center rounded p-3"><div class="py-2 rounded mb-3 info-place"><span class="timeline-title">Twoje działania:</span></div><div class="py-4 bg-light rounded mb-15 px-3 info-place"><span class="mynumber">1</span>Wprowadzasz informację o przychodach np. wynagrodzeniu z pracy.</div><div class="p-4 bg-light rounded mb-15 px-3 info-place"><span class="mynumber">3</span>Dokonujesz płatności - wprowadzasz wydatek.</div><div class="py-4 bg-light rounded mb-5 px-3 info-place"><span class="mynumber">5</span>Panujesz nad swoim budżetem, sprawdzasz bilans z dowolnego okresu.</div></div><div class="col-sm-2 text-center p-3 px-3 text-center"><div class="fusion-timeline-line"><span class = "timeline-circle mt-10 mb-10"></span><span class = "timeline-circle mb-12"></span><span class = "timeline-circle mb-12"></span><span class = "timeline-circle mb-10"></span><span class = "timeline-circle mb-10"></span><span class = "timeline-circle"></span></div><i class="icon-down-dir timeline-arrow"></i></div><div class="col-md-5 col-lg-4 col-xl-3 text-center p-3"><div class="py-2 rounded mb-15 px-3 info-place"><span class="timeline-title">Efekt:</span></div><div class="py-4 bg-light rounded mb-15 px-3 info-place"><span class="mynumber">2</span>Twój portfel w aplikacji zostaje uzupełniony o dodatkowe środki.</div><div class="py-4 bg-light rounded mb-15 px-3 info-place"><span class="mynumber">4</span>Twój portfel zostaje obciążony.</div><div class=" p-4 bg-light rounded mb-5 px-3 info-place"><span class="mynumber">6</span>Pełna kontrola to więcej oszczędności :)</div></div>';
+		}
+	}	
+}
