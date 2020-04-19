@@ -27,6 +27,12 @@
 .icon-down-dir:before { content: '\e819'; } /* '' */
 .icon-down-1:before { content: '\e81a'; } /* '' */
 .icon-down-fat:before { content: '\e81b'; } /* '' */
+.icon-chart-bar-2:before { content: '\e81c'; } /* '' */
+.icon-chart:before { content: '\e81d'; } /* '' */
+.icon-grocery-store:before { content: '\e81e'; } /* '' */
+.icon-chart-bar-3:before { content: '\e81f'; } /* '' */
+.icon-trash:before { content: '\e820'; } /* '' */
+.icon-doc-add:before { content: '\e821'; } /* '' */
 .icon-logout:before { content: '\f02d'; } /* '' */
 .icon-facebook:before { content: '\f052'; } /* '' */
 .icon-twitter:before { content: '\f058'; } /* '' */

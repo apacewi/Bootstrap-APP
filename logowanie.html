@@ -3,8 +3,11 @@
 <head>
 
 <meta charset = "utf-8" />
-<meta http-equiv="X-UA-Compatible" content ="IE=edge, chrome=1" />
+<meta http-equiv="X-UA-Compatible" content ="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Oszczędzanko-logowanie</title>
+
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -33,14 +36,14 @@
 			</nav>
 		</div>
 	</header>
-		<main role="main" class = "container">
+		<main class = "container">
 		<div class="row justify-content-center">
 			<div id="paneltitle" class="col-10 text-center text-color-mine text-white mt-2" >
 				<h2>Zaloguj się na własne darmowe konto!</h2>
 			</div>
 		</div>
 			<div class="row justify-content-center">
-				<div class="col-md-4">					
+				<section class="col-md-4">					
 					<div class="py-3 my-2 bg-light text-black text-center rounded">
 						<div class="d-inline-block buttons-sizing rounded border-danger buttons-underline" onclick="changetologin()" >
 							<span class="button-size text-break">Zaloguj</span>
@@ -58,7 +61,7 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text button-size" id="basic-addon1">@</span>
 									</div>
-									<input type="text" class="form-control" placeholder="Adres Email " aria-label="Username" aria-describedby="basic-addon1">
+									<input type="text" id="przykladowyEmail" class="form-control" placeholder="Adres Email " aria-label="Username" aria-describedby="basic-addon1">
 								</div>
 							</div>
 						  
@@ -66,9 +69,9 @@
 								<label for="przykladoweHaslo">Hasło</label>
 								<div class="input-group mb-1">
 									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1"><i class="icon-lock"></i></span>
+										<span class="input-group-text" id="basic-addon2"><i class="icon-lock"></i></span>
 									</div>
-									<input type="password" class="form-control" placeholder="Hasło " aria-label="password" aria-describedby="basic-addon1">
+									<input type="password" id="przykladoweHaslo" class="form-control" placeholder="Hasło " aria-label="password" aria-describedby="basic-addon1">
 								</div>
 							</div>
 							<div class="form-check">
@@ -82,23 +85,23 @@
 							</div>
 						</form>
 					</div>
-				</div>
-				<div class="col-md-5">
+				</section>
+				<section class="col-md-5">
 					<div class="bg-light mb-3 p-md-2 my-md-2 rounded text-break">
-						<fieldset class="border-mine border-danger text-sizing">
+						<fieldset class="border-mine border-danger text-sizing px-3">
 						   <legend  class="w-auto"><h5>Dlaczego warto?</h5></legend>   
 							<ul class="mr-3 text-justify">
 								<li><h6>Darmowy system oszczędzania:</h6><p>Wystarczy regularnie wprowadzać zawarte transakcje.</p></li>
 								
-								<li><p><h6>Mobilność:</h6> Możliwość ewidencjonowania budżetu w każdym momencie za pomocą urządzeń mobilnych.</p></li>
+								<li><h6>Mobilność:</h6><p>Możliwość ewidencjonowania budżetu w każdym momencie za pomocą urządzeń mobilnych.</p></li>
 								
-								<li><p><h6>Satysfakcja:</h6>Nic nie tracisz a możesz jedynie zyskać. Pierwsze efekty zobaczysz już po miesiącu!</p></li>
+								<li><h6>Satysfakcja:</h6><p>Nic nie tracisz a możesz jedynie zyskać. Pierwsze efekty zobaczysz już po miesiącu!</p></li>
 								
-								<li><p><h6>Pełna kontrola nad budżetem:</h6> Widzisz dokładnie stosunek przychodów/wydatków z dowolnego okresu.<p></li>
+								<li><h6>Pełna kontrola nad budżetem:</h6><p>Widzisz dokładnie stosunek przychodów/wydatków z dowolnego okresu.<p></li>
 							</ul>
 						</fieldset>
 					</div>
-				</div>
+				</section>
 			</div>
 		</main>
 	<section>
